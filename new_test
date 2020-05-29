@@ -16,7 +16,8 @@ test_emoji = {
 
 
 
-test_emoji.find do |key,value|
-    test_emoji[key][:english].include?("o_O")
-    return test_emoji[key][:japanese]
+if test_emoji.find {|key,value| test_emoji[key][:english].include?(":o")
+    puts test_emoji[key][:japanese]
+    else
+    return "No"
   end
