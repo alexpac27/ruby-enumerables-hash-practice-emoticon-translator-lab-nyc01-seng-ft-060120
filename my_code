@@ -1,10 +1,10 @@
 require 'pry'
 require "yaml"
 
-#test_emoji =  {
-#  "angel"=>["O:)", "☜(⌒▽⌒)☞"],
-#  "angry"=>[">:(", "ヽ(ｏ`皿′ｏ)ﾉ"],
-#  "wink"=>[";)", "(^_-)"]}
+test_emoji =  {
+  "angel"=>["O:)", "☜(⌒▽⌒)☞"],
+  "angry"=>[">:(", "ヽ(ｏ`皿′ｏ)ﾉ"],
+  "wink"=>[";)", "(^_-)"]}
 
 def load_library (file)
   emojifile = YAML.load_file(file)
@@ -13,7 +13,7 @@ def load_library (file)
     emojifile.each do |key,value|
       hash[key] = {:english => value[0], :japanese => value[1]}
       end
-  return hash
+  pp hash
 end
 
 def get_english_meaning(file, j_emoticon)
@@ -39,10 +39,6 @@ def get_japanese_emoticon (file, e_emoticon)
     return emojifile[key][:japanese]
   end
 }
-#  else
-#    return "Sorry, that emoticon was not found"
-
-
 end
 
 #def get_japanese_emoticon (file, e_emoticon)

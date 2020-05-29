@@ -1,0 +1,14 @@
+test_emoji = {
+"angel"=>{:english=>"O:)", :japanese=>"☜(⌒▽⌒)☞"},
+"angry"=>{:english=>">:(", :japanese=>"ヽ(ｏ`皿′ｏ)ﾉ"},
+"surprised"=>{:english=>":o", :japanese=>"o_O"},
+"wink"=>{:english=>";)", :japanese=>"(^_-)"}
+}
+
+pp test_emoji
+
+
+test_emoji.each do |key,value|
+    test_emoji[key][:english].include?(e_emoticon)
+    return emojifile[key][:japanese]
+  end
