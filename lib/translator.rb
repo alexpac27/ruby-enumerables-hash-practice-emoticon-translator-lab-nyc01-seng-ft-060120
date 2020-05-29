@@ -20,9 +20,7 @@ def get_english_meaning(file, j_emoticon)
   emojifile = load_library(file)
 
 emojifile.all? {|key,value|
-if emojifile[key][:english].include?(e_emoticon) == false
-  return "Sorry, that emoticon was not found"
-end}
+
 
   emojifile.each {|key,value|
     if emojifile[key][:japanese].include?(j_emoticon)
