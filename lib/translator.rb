@@ -18,12 +18,9 @@ end
 
 def get_english_meaning(file, j_emoticon)
   emojifile = load_library(file)
+ff = emojifile.flatten
+ff2 = ff.flatten
 
-#  emojifile.none? {|key,value|
-#    if emojifile[key][:japanese].include?(j_emoticon)
-#    return "Sorry, that emoticon was not found"
-#  end
-#}
 #    return "Sorry, that emoticon was not found"
   emojifile.each {|key,value|
     if emojifile[key][:japanese].include?(j_emoticon)
