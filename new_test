@@ -16,7 +16,7 @@ data = {
 
 
 
-test_emoji.each do |key,value|
-    test_emoji[key][:english].include?(e_emoticon)
+test_emoji.find do |key,value|
+    test_emoji[key][:english].include?("o_O")
     return emojifile[key][:japanese]
   end
