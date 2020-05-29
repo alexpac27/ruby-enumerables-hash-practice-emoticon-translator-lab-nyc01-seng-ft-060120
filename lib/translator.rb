@@ -13,7 +13,7 @@ def load_library (file)
     emojifile.each do |key,value|
       hash[key] = {:english => value[0], :japanese => value[1]}
       end
-  pp hash
+  return hash
 end
 
 def get_english_meaning(file, j_emoticon)
