@@ -26,17 +26,20 @@ def get_english_meaning(file, j_emoticon)
 }
 end
 
-def get_japanese_emoticon (file, e_emoticon)
-  emojifile = load_library(file)
-  emojifile.each {|key,value|
-    if emojifile[key][:english].include?(e_emoticon)
-    return emojifile[key][:japanese]
+def get_japanese_emoticon(yaml_file, eng_emoti)
+# code goes here
+translation = ""
+new_hash = load_library(yaml_file)
+new_hash.each do |name, languages|
+    if languages[:english] == eng_emoti
+    translation = languages[:japanese]
   end
-}
-#  else
-#    return "Sorry, that emoticon was not found"
-
-
+end
+  if translation == ""
+    return "Sorry, that emoticon was not found"
+  else
+    return translation
+  end
 end
 
 #def get_japanese_emoticon (file, e_emoticon)
