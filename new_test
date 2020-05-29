@@ -1,4 +1,4 @@
-data = {
+test_emoji = {
  "angel"=>{:english=>"O:)", :japanese=>"☜(⌒▽⌒)☞"},
  "angry"=>{:english=>">:(", :japanese=>"ヽ(ｏ`皿′ｏ)ﾉ"},
  "bored"=>{:english=>":O", :japanese=>"(ΘεΘ;)"},
