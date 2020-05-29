@@ -19,7 +19,7 @@ end
 def get_english_meaning(file, j_emoticon)
   emojifile = load_library(file)
 
-emojifile.all? {|key,value|
+
 
 
   emojifile.each {|key,value|
